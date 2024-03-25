@@ -3,14 +3,24 @@ import { SubHeading } from "../components/Subheading";
 import Inputbox from "../components/InputBox";
 import Bottomwarnig from "../components/Bottomwarning";
 import Button from "../components/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { baseurl } from "../../url";
 export default function Signin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [access, setacess] = useState(false);
   const navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setacess(true);
+    }
+  }, []);
+
+  if (access == true) {
+    navigate("/dashboard");
+  }
   return (
     <>
       <div className="bg-slate-300 flex justify-center h-screen">

@@ -1,4 +1,6 @@
-export default function Displayusers({ name, onclick }) {
+import React, { useMemo } from "react";
+
+const DisplayUsers = ({ name, onclick }) => {
   const letter = name[0].toUpperCase();
   return (
     <div className="flex items-center mt-3 justify-between ml-11 mr-10">
@@ -10,10 +12,12 @@ export default function Displayusers({ name, onclick }) {
       </div>
       <button
         onClick={onclick}
-        className=" bg-black text-white  font-semibold text-sm rounded-lg sm:px-3 sm:py-3 px-1 py-1"
+        className="bg-black text-white font-semibold text-sm rounded-lg sm:px-3 sm:py-3 px-1 py-1"
       >
         Send money
       </button>
     </div>
   );
-}
+};
+
+export default DisplayUsers;

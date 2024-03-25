@@ -56,8 +56,8 @@ export default function Signup() {
                   {
                     username,
                     password,
-                    firstname,
-                    lastname,
+                    firstname: firstname.toLowerCase(),
+                    lastname: lastname.toLowerCase(),
                   }
                 );
 

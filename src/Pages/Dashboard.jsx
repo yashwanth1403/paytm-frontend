@@ -9,6 +9,7 @@ import { baseurl } from "../../url";
 
 export default function Dashboard() {
   const [balance, setBalance] = useState("");
+  const [loading, setloading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Dashboard() {
       })
       .then((response) => {
         setBalance(response.data.balance);
+        setloading(false);
       })
       .catch((error) => {
         console.error("Error fetching balance:", error);
@@ -27,6 +29,13 @@ export default function Dashboard() {
       });
   }, []);
 
+  if (loading == true) {
+    return (
+      <div className="text-3xl font-semibold">
+        <div>loading.....</div>
+      </div>
+    );
+  }
   return (
     <>
       <div className="h-screen">

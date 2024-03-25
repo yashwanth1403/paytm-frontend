@@ -28,7 +28,7 @@ export default function Send() {
           <div className="self-start mt-7 flex flex-col w-full p-5">
             <div className="flex gap-2 items-center self-start">
               <div className="h-12 w-12 rounded-full bg-green-500 flex justify-center items-center text-white ">
-                {name[0].toUpperCase()}
+                {name[0]}
               </div>
               <div className="text-lg">{name}</div>
             </div>
