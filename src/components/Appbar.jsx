@@ -34,7 +34,7 @@ export default function Appbar({ title }) {
                 logout ? setlogoout(false) : setlogoout(true);
               }}
             >
-              {name[0].toUpperCase()}
+              {name[0]}
             </button>
             {logout ? (
               <button
