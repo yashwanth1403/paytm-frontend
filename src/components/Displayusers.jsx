@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 
 const DisplayUsers = ({ name, onclick }) => {
-  const letter = name[0].toUpperCase();
+  const letter = name[0];
   return (
     <div className="flex items-center mt-3 justify-between ml-11 mr-10">
       <div className="flex items-center gap-2">
